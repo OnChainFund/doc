@@ -6,3 +6,4 @@
 # 第二章
 - Portfolio Management
 - Test
+- Test from vscode

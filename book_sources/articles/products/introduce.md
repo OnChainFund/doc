@@ -14,14 +14,14 @@ Transformer model is first introduced in 2017 by a team at Google Brain and are 
 
 ## Mean Variance Objective
 Our deep learning model is estimated with a Sharpe ratio objective. For estimated long-short portfolio, the sum of absolute stock weights is normalized to 1, which imposes a  leverage constraint. For portfolios with short selling constraints, the sum of stock weights is normalized to 1.
-$
+
 \begin{equation}
 \begin{aligned}
 &\max_{w^{\epsilon}\in W,\theta \in \Theta} \quad  \frac{\mathbb{E}[w_{t-1}^{R}R_t]}{\sqrt{Var(w_{t-1}^{R}R_t)}} \quad \quad \text{or}\quad \max_{w^{\epsilon}\in W,\theta \in \Theta} \mathbb{E}[w_{t-1}^{R}R_t] - \gamma Var(w_{t-1}^{R}R_t)\quad\\
 &s.t\quad\quad ||w_{t-1}^{R}||_{1} = 1
 \end{aligned}
 \end{equation}
-$
+
 ## Rebalancing
 
 We rebalance our portfolio every 5 days. With data of past 15 days, our model gives the portfolio weight for the following 5 days.
